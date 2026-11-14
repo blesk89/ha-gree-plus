@@ -93,6 +93,9 @@
       "indoor_temperature": {
         "name": "Indoor temperature"
       },
+      "humidity": {
+        "name": "Humidity"
+      },
       "outdoor_temperature": {
         "name": "Outdoor temperature"
       },
@@ -101,6 +104,12 @@
       },
       "compressor_frequency": {
         "name": "Compressor frequency"
+      },
+      "compressor_temperature": {
+        "name": "Compressor temperature"
+      },
+      "auxiliary_heat": {
+        "name": "Auxiliary heat"
       }
     }
   }

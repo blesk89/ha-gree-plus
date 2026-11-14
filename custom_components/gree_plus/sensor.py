@@ -12,7 +12,7 @@ from homeassistant.components.sensor import (
     SensorEntityDescription,
     SensorStateClass,
 )
-from homeassistant.const import EntityCategory, UnitOfFrequency, UnitOfTemperature
+from homeassistant.const import EntityCategory, PERCENTAGE, UnitOfFrequency, UnitOfTemperature
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.entity_platform import AddConfigEntryEntitiesCallback
 
@@ -60,6 +60,15 @@ SENSORS: tuple[GreeSensorDescription, ...] = (
         entity_registry_enabled_default=False,
     ),
     GreeSensorDescription(
+        key="humidity",
+        translation_key="humidity",
+        prop="DwatSen",
+        convert=lambda v: v if isinstance(v, (int, float)) else None,
+        device_class=SensorDeviceClass.HUMIDITY,
+        state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=PERCENTAGE,
+    ),
+    GreeSensorDescription(
         key="compressor_frequency",
         translation_key="compressor_frequency",
         prop="CompressorFqy",
@@ -67,6 +76,24 @@ SENSORS: tuple[GreeSensorDescription, ...] = (
         device_class=SensorDeviceClass.FREQUENCY,
         state_class=SensorStateClass.MEASUREMENT,
         native_unit_of_measurement=UnitOfFrequency.HERTZ,
+        entity_category=EntityCategory.DIAGNOSTIC,
+    ),
+    GreeSensorDescription(
+        key="compressor_temperature",
+        translation_key="compressor_temperature",
+        prop="CompressorTem",
+        device_class=SensorDeviceClass.TEMPERATURE,
+        state_class=SensorStateClass.MEASUREMENT,
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        entity_category=EntityCategory.DIAGNOSTIC,
+        entity_registry_enabled_default=False,
+    ),
+    GreeSensorDescription(
+        key="auxiliary_heat",
+        translation_key="auxiliary_heat",
+        prop="AssHt",
+        convert=lambda v: v if isinstance(v, (int, float)) else None,
+        state_class=SensorStateClass.MEASUREMENT,
         entity_category=EntityCategory.DIAGNOSTIC,
     ),
 )

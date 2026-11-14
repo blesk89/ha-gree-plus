@@ -94,6 +94,9 @@ STATUS_COLS = [
     "Blo",
     "SwhSlp",
     "AllErr",
+    "DwatSen",
+    "CompressorTem",
+    "AssHt",
 ]
 
 
