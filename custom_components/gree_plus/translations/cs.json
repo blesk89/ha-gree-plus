@@ -1,0 +1,116 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Účet Gree+",
+        "description": "Přihlaste se účtem, který používáte v aplikaci Gree+. Přidají se všechny klimatizace na tomto účtu.",
+        "data": {
+          "username": "E-mail",
+          "password": "Heslo",
+          "region": "Region serveru"
+        },
+        "data_description": {
+          "region": "Server, na kterém je váš účet Gree+ založen. Novozélandské účty používají australský server. Automatická detekce postupně vyzkouší všechny servery."
+        }
+      },
+      "reauth_confirm": {
+        "title": "Zadejte znovu heslo Gree+",
+        "description": "Cloud Gree+ odmítl uložené heslo pro {username}.",
+        "data": {
+          "password": "Heslo"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "E-mail nebo heslo nebylo přijato.",
+      "cannot_connect": "Nepodařilo se připojit ke cloudu Gree+. Zkontrolujte síť a zkuste to znovu."
+    },
+    "abort": {
+      "already_configured": "Tento účet Gree+ je již nastaven.",
+      "reauth_successful": "Opětovné přihlášení proběhlo úspěšně.",
+      "wrong_account": "Toto heslo patří k jinému účtu Gree+."
+    }
+  },
+  "selector": {
+    "region": {
+      "options": {
+        "auto": "Automatická detekce",
+        "australia": "Austrálie / Nový Zéland",
+        "europe": "Evropa",
+        "north_america": "Severní Amerika",
+        "south_america": "Jižní Amerika",
+        "latin_america": "Latinská Amerika",
+        "east_south_asia": "Východní / Jihovýchodní Asie",
+        "india": "Indie",
+        "middle_east": "Blízký východ",
+        "russia": "Rusko",
+        "china": "Pevninská Čína"
+      }
+    }
+  },
+  "entity": {
+    "climate": {
+      "gree_plus": {
+        "state_attributes": {
+          "fan_mode": {
+            "state": {
+              "auto": "Automaticky",
+              "low": "Nízká",
+              "medium_low": "Středně nízká",
+              "medium": "Střední",
+              "medium_high": "Středně vysoká",
+              "high": "Vysoká",
+              "quiet": "Tichý režim",
+              "turbo": "Turbo"
+            }
+          },
+          "swing_mode": {
+            "state": {
+              "off": "Vypnuto",
+              "swing": "Kývání (celý rozsah)",
+              "fixed_top": "Pevně: nahoře",
+              "fixed_upper": "Pevně: výše",
+              "fixed_middle": "Pevně: uprostřed",
+              "fixed_lower": "Pevně: níže",
+              "fixed_bottom": "Pevně: dole"
+            }
+          },
+          "swing_horizontal_mode": {
+            "state": {
+              "off": "Vypnuto",
+              "swing": "Kývání (celý rozsah)",
+              "fixed_left": "Pevně: vlevo",
+              "fixed_left_center": "Pevně: vlevo uprostřed",
+              "fixed_center": "Pevně: uprostřed",
+              "fixed_right_center": "Pevně: vpravo uprostřed",
+              "fixed_right": "Pevně: vpravo"
+            }
+          }
+        }
+      }
+    },
+    "sensor": {
+      "indoor_temperature": {
+        "name": "Vnitřní teplota"
+      },
+      "humidity": {
+        "name": "Vlhkost"
+      },
+      "outdoor_temperature": {
+        "name": "Venkovní teplota"
+      },
+      "indoor_coil_temperature": {
+        "name": "Teplota vnitřního výměníku"
+      },
+      "compressor_frequency": {
+        "name": "Frekvence kompresoru"
+      },
+      "compressor_temperature": {
+        "name": "Teplota kompresoru"
+      },
+      "auxiliary_heat": {
+        "name": "Pomocné topení"
+      }
+    }
+  }
+}
