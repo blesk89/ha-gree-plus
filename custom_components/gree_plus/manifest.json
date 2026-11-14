@@ -1,13 +1,13 @@
 {
   "domain": "gree_plus",
   "name": "Gree+",
-  "codeowners": ["@ChillingSilence"],
+  "codeowners": ["@ChillingSilence", "@blesk89"],
   "config_flow": true,
-  "documentation": "https://github.com/Chill-Division/ha-gree-plus",
+  "documentation": "https://github.com/blesk89/ha-gree-plus",
   "integration_type": "hub",
   "iot_class": "cloud_push",
-  "issue_tracker": "https://github.com/Chill-Division/ha-gree-plus/issues",
+  "issue_tracker": "https://github.com/blesk89/ha-gree-plus/issues",
   "loggers": ["custom_components.gree_plus", "paho"],
   "requirements": ["paho-mqtt>=2.1.0"],
-  "version": "0.1.0"
+  "version": "0.2.0"
 }
